@@ -12,7 +12,7 @@ const schema = {
 };
 
 module.exports = class CleanPlugin {
-  constructor(options = {exclude: ''}) {
+  constructor(options = { exclude: '' }) {
     this.options = options;
     validateOptions(schema, options, 'Clean Plugin');
   }

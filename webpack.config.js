@@ -8,9 +8,9 @@ const CountTimePlugin = require('./plugins/count-time.js')
 const EmptyPlugin = require('empty-webpack-plugin');
 
 module.exports = {
-  resolveLoader: {
-    modules: ['node_modules', 'loaders']
-  },
+	resolveLoader: {
+		modules: ['node_modules', 'loaders']
+	},
 
 	entry: {
 		index: './src/js/index.js'
@@ -21,13 +21,13 @@ module.exports = {
 			{
 				test: /\.md$/,
 				use: [
-				{
-					loader: 'html-loader'
-				},
-				{
-					loader: 'markdown-loader',
-					options: {}
-				}],
+					{
+						loader: 'html-loader'
+					},
+					{
+						loader: 'markdown-loader',
+						options: {}
+					}],
 			},
 			{
 				test: /\.css$/,
@@ -41,13 +41,13 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/views/index.html',
-      title: 'haha'
+			filename: 'index.html',
+			template: './src/views/index.html',
+			title: 'haha'
 		}),
-		new HelloWorldPlugin({a: 1}),
+		new HelloWorldPlugin({ a: 1 }),
 		new FileListPlugin(),
-		new EmptyPlugin({exclude: 'a'}),
+		new EmptyPlugin({ exclude: 'a' }),
 		new CountTimePlugin()
 	]
 }

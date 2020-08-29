@@ -1,6 +1,6 @@
 
 module.exports = class CleanPlugin {
-  
+
   apply(compiler) {
     let self = this
     compiler.hooks.entryOption.tap('CountTime', (complation) => {
